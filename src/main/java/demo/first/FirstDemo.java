@@ -21,5 +21,8 @@ public class FirstDemo {
 
         System.out.println("Nice to meet you, " + name + ". Your age is: " + age);
 
+        /* multiline
+        comments
+         */
     }
 }

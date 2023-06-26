@@ -5,6 +5,7 @@ public class Variables {
     static String staticString;
     //instance variable
     byte age;
+    String name;
     public static void main(String[] args) {
         //local variables:
         //primitive data types

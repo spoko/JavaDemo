@@ -18,5 +18,9 @@ public class Test {
         Variables.staticString = "some \"random\" text";
 
         System.out.println(Variables.staticString);
+
+        System.out.println(o1);
+        System.out.println(o1.age);
+        System.out.println(o1.name);
     }
 }

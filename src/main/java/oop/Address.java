@@ -39,7 +39,7 @@ public class Address {
         this.additionalData = additionalData;
     }
 
-    //constructor
+    //Type II constructor
     public Address(String country, String city, int postalCode, String additionalData){
         setCountry(country);
         setCity(city);
@@ -47,8 +47,31 @@ public class Address {
         setAdditionalData(additionalData);
     }
 
-    //constructor overload
+    //Type II constructor overload
     public Address(String country){
         setCountry(country);
+    }
+
+    //type I constructor
+    public Address (){
+        setCountry("Bulgaria");
+        setCity("Sofia");
+        setPostalCode(1000);
+        setAdditionalData("-");
+    }
+
+    //copy constructor
+    public Address(Address address){
+        //it is not mandatory to use the setters here because we have a valid object already
+        this.city = address.city;
+        this.country = address.country;
+        this.postalCode = address.postalCode;
+        this.additionalData = address.additionalData;
+    }
+
+    //method override from the Object class
+    public String toString(){
+        return String.format("Country is: %s, city is: %s, postal code is: %d, additional data is: %s",
+                country, city, postalCode, additionalData);
     }
 }

@@ -7,9 +7,14 @@ public class Variables {
     byte age;
     String name;
 
+
+
+    //constructor with parameter(s)
     public Variables(String name){
         //some logic here
     }
+
+    //default constructor
     public Variables(){
 
     }

@@ -51,6 +51,18 @@ public class Pet implements PetActions {
         }
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        if (!address.equals(null)){
+            this.address = address;
+        }else {
+            System.out.println("Error: Invalid entry for address!");
+        }
+    }
+
     public byte getAge() {
         return age;
     }

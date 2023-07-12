@@ -6,6 +6,10 @@ public class Test {
                 "Meduim size, playfull, 12-20kg", "sick stomach");
         Breed shepard = new Breed("Shepard", "35-50kg...", "-");
         Breed persian = new Breed("Persian", "fur is long", "-");
+        Address address1 = new Address();
+        Address address5 = new Address();
+        Address address2 = new Address("Bulgaria");
+        Address address3 = new Address("GB", "London", 2000, "no data");
         Dog frenchie = new Dog(frenchBulldog);//calling the constructor in order to create a new
         // object from that type (Class)
         Dog sharo = new Dog(shepard);
@@ -15,6 +19,7 @@ public class Test {
         fur.setName("Snowbowl");
         fur.setSex("Female");
         fur.setWeight(4.3f);
+        fur.setAddress(address1);
 
         //frenchie and sharo are object from type Dog - instances
         frenchie.setName("Morti");
@@ -23,6 +28,7 @@ public class Test {
         //frenchie.setBreed("French Bulldog");
         //frenchie.setBreed("blah blah");
         frenchie.setWeight(15.0f);
+        frenchie.setAddress(address2);
 
         frenchie.bark("Blah blah");
         frenchie.eat();
@@ -31,6 +37,7 @@ public class Test {
         sharo.sleep();
         sharo.eat();
         sharo.bark();
+        sharo.setAddress(address5);
 
         System.out.println(sharo.getAge());
         System.out.println(frenchie.getAge());
@@ -48,6 +55,12 @@ public class Test {
         fur.makeNoise();
         fur.walk();
         fur.goingToTheVet();
+
+
+        System.out.println(fur.getAddress());
+        System.out.println(frenchie.getAddress());
+        System.out.println(sharo.getAddress());
+
 
     }
 }

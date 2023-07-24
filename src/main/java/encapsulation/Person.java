@@ -40,9 +40,9 @@ public class Person {
         if (this.money >= product.getCost()){
             bagOfProducts.add(product);
             this.setMoney(this.money - product.getCost());
-            System.out.printf("%s bought %s.\n", this.name, product.getName());
+            System.out.printf("%s bought %s\n", this.name, product.getName());
         }else {
-            System.out.printf("%s can't afford %s.\n", this.name, product.getName());
+            System.out.printf("%s can't afford %s\n", this.name, product.getName());
         }
     }
 
@@ -51,5 +51,29 @@ public class Person {
             System.out.printf("%s - Nothing bought\n", this.name);
             return;
         }
+
+        String itemNames = "";
+        //for each cycle
+        for (Product product : bagOfProducts){
+            if (bagOfProducts.size() > 1){
+                itemNames += product.getName() + ", ";
+            }else {
+                itemNames += product.getName();
+            }
+        }
+
+        if (bagOfProducts.size() > 1){
+            //method call from this method
+            itemNames = trimProductsNames(itemNames);
+        }
+
+        System.out.printf("%s - %s\n", this.name, itemNames);
+    }
+
+    //internal method
+    private String trimProductsNames(String input){
+        input = input.trim(); //removes the space at the end
+        input = input.substring(0, input.length() - 1);//removes the last letter in the string
+        return input;
     }
 }

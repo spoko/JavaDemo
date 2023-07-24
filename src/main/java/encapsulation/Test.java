@@ -12,5 +12,23 @@ public class Test {
         alex.buyProduct(tea);
         alex.buyProduct(tea);
         elena.buyProduct(tea);
+
+        elena.printItemsInTheBag();
+        alex.printItemsInTheBag();
+
+        System.out.println("---------------------");
+
+        Person mimi = new Person("Mimi", 0);
+        Product juice = new Product("Juice", 2);
+
+        mimi.buyProduct(juice);
+        mimi.printItemsInTheBag();
+
+        System.out.println("---------------------");
+
+        Person petar = new Person("Petar", -3);
+        Product bread = new Product("Bread", 1);
+
+        petar.buyProduct(bread);
     }
 }

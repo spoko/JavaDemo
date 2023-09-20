@@ -21,11 +21,7 @@ public class Developer extends Employee{
         setProgramingLanguage(programingLanguage);
     }
 
-    //method
-    public void calculateBonus(boolean isTargetAchieved, double bonus){
-        if(isTargetAchieved){
-            //System.out.println(getSalary() + bonus);
-            setSalary(getSalary() + bonus);
-        }
+    public void calculateAnnualBonus(){
+        System.out.println("You have a bonus: 1000");
     }
 }

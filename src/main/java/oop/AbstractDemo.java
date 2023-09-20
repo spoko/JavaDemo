@@ -6,7 +6,15 @@ public abstract class AbstractDemo {
     public abstract void saySomething();
 
     //non-abstract method in abstract class
-    public void signSomething(){
+    public final void signSomething(){
         System.out.println("I am signing!");
+    }
+
+    public static void printOne(){
+        System.out.println(1);
+    }
+
+    public AbstractDemo(String whatToSay){
+        System.out.println(whatToSay);
     }
 }

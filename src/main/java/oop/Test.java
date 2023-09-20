@@ -61,6 +61,6 @@ public class Test {
         System.out.println(frenchie.getAddress());
         System.out.println(sharo.getAddress());
 
-
+        //AbstractDemo abs = new AbstractDemo(); we cannot create an object/ instance from an abstract class
     }
 }
